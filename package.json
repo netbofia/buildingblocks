@@ -1,5 +1,5 @@
 {
-  "name": "buildingblocks",
+  "name": "@netbofia/buildingblocks",
   "version": "1.0.0",
   "description": "General purpose utils to build html or round numbers",
   "main": "index.js",
@@ -18,5 +18,6 @@
   "author": "Bruno Costa",
   "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
+
   }
 }
