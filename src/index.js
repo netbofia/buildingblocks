@@ -232,7 +232,7 @@ function makeModal(titleText,bodyContent){
   return $('.modal.new-table-entry')
 }
 
-let buildingblocks
+let buildingblocks={}
 buildingblocks.makeButton=makeButton
 buildingblocks.makeToast=makeToast
 buildingblocks.makeSelect=makeSelect
