@@ -81,12 +81,12 @@ function makeToast(title,body){
   toast.append(toastHeader)
   toast.append(toastBody)
 
-  let img=mkel('img',{class:"rounded mr-2",src:"...",alt:"..."})
-  let strong=mkel('strong',{class:"mr-auto pr-4"})
-  let small=mkel('small',{class:"text-muted"})
+  let img=mkel('img',{class:"rounded mr-2",src:"",alt:""})
+  let strong=mkel('strong',{class:"me-auto"})
+  let small=mkel('small',{class:"text-body-secondary"})
   strong.textContent=title
   small.textContent='just now'
-  let buttonClose=mkel('button',{class:"ml-2 mb-1 close",type:"button","data-dismiss":"toast","aria-label":"Close"})
+  let buttonClose=mkel('button',{class:"ml-2 mb-1 btn-close close",type:"button","data-bs-dismiss":"toast","data-dismiss":"toast","aria-label":"Close"})
   let span=mkel("span",{"aria-hidden":'true'})
   span.textContent="x"
   buttonClose.append(span)
@@ -133,6 +133,9 @@ function displayToast(title,body,displayTime,destinationSelector){
   }
   function makeLocation(destinationSelector){
     let attributes=parseJQstring(destinationSelector)
+    if(bootstrap){
+    	attributes['class']="toast-container top-0 end-0 p-3"	  
+    }
     attributes['style']="position:fixed;top:0;right:0"
     mkel('div',attributes,$('body'))
   }  

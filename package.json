@@ -1,6 +1,6 @@
 {
   "name": "@netbofia/buildingblocks",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "General purpose utils to build html or round numbers",
   "main": "src/index.js",
   "scripts": {
@@ -12,8 +12,7 @@
     "url": "https://github.com/netbofia/buildingblocks"
   },
   "keywords": [
-    "etion:",
-    "${comp}\""
+    "Bootstrap","utils"
   ],
   "author": "Bruno Costa",
   "license": "SEE LICENSE IN LICENSE",
