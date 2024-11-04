@@ -140,12 +140,21 @@ function displayToast(title,body,displayTime,destinationSelector){
     let animation=true
     let autohide=false
     if(!delay) delay=3000
-    toaster.toast(animation,autohide,delay)
+    if(bootstrap){
+      new bootstrap.Toast(toaster[0],{animation,autohide,delay})
+    }else{
+      //old bootstrap or jquery
+      toaster.toast(animation,autohide,delay)
+    }  
   }
   function throwToast(toaster,toast){
     if(toast){
       toaster.append(toast)
-      toaster.children().last().toast('show')
+      if(bootstrap){
+        toaster.children().last().show()
+      }else{
+        toaster.children().last().toast('show')
+      }	    
       //Update timer on toast
       //While shown
       //TODO
